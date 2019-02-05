@@ -669,6 +669,25 @@
           }
         }
       }
+    },
+    "/diagnostic_reports/{report_id}" : {
+      "get" : {
+        "parameters" : [ {
+          "name" : "report_id",
+          "in" : "path",
+          "description" : "ID of report to return",
+          "required" : true,
+          "schema" : {
+            "type" : "integer",
+            "format" : "int64"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          }
+        }
+      }
     }
   },
   "securityDefinitions" : {
