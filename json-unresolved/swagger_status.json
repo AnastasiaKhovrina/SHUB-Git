@@ -209,7 +209,7 @@
         "deprecated" : true
       }
     },
-    "/pet/{petId}" : {
+    "/WCFREST/Service.svc/ConStroka" : {
       "get" : {
         "tags" : [ "pet" ],
         "summary" : "Find pet by ID",
@@ -217,12 +217,23 @@
         "operationId" : "getPetById",
         "produces" : [ "application/json", "application/xml" ],
         "parameters" : [ {
-          "name" : "petId",
-          "in" : "path",
+          "name" : "x",
+          "in" : "query",
           "description" : "ID of pet to return",
           "required" : true,
-          "type" : "integer",
-          "format" : "int64"
+          "type" : "string"
+        }, {
+          "name" : "y",
+          "in" : "query",
+          "description" : "ID of pet to return",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "apikey",
+          "in" : "query",
+          "description" : "ID of pet to return",
+          "required" : true,
+          "type" : "string"
         } ],
         "responses" : {
           "200" : {
@@ -666,25 +677,6 @@
           },
           "404" : {
             "description" : "User not found"
-          }
-        }
-      }
-    },
-    "/diagnostic_reports/{report_id}" : {
-      "get" : {
-        "parameters" : [ {
-          "name" : "report_id",
-          "in" : "path",
-          "description" : "ID of report to return",
-          "required" : true,
-          "schema" : {
-            "type" : "integer",
-            "format" : "int64"
-          }
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "OK"
           }
         }
       }
