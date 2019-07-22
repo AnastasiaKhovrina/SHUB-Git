@@ -61,7 +61,7 @@
         "tags" : [ "pet" ],
         "summary" : "Update an existing pet",
         "operationId" : "updatePet",
-        "consumes" : [ "application/json", "application/xml" ],
+        "consumes" : [ "application/json; charset=utf-8", "application/xml" ],
         "produces" : [ "application/json", "application/xml" ],
         "parameters" : [ {
           "in" : "body",
